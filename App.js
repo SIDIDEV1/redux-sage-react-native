@@ -36,7 +36,6 @@ export default function App() {
               component={UsersList}
               options={() => ({
                 headerShown: false,
-                headerBackTitle: 'home'
               })}
             />
             <Stack.Screen
@@ -44,18 +43,11 @@ export default function App() {
               component={AboutScreen}
               options={({ route, navigation }) => ({
                 title: route.params.item.name,
-                headerBackTitle: 'home',
                 headerRight: () => (
                   <TouchableOpacity>
                     <Feather name="edit" size={22} color={colors.secondary} />
                   </TouchableOpacity>
                 ),
-                // headerLeft: () => (
-                //   <TouchableOpacity onPress={() => navigation.goBack()}>
-                //     <Text style={{ fontSize: 18, color: 'red' }}>{route.params.numberEmployee}</Text>
-                //   </TouchableOpacity>
-                // ),
-                // headerBackTitle: 'back lol'
               })}
 
             />
